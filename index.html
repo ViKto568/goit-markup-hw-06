@@ -62,13 +62,64 @@
           <h1 class="hero-titel">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
           <button type="button" class="hero-btn" data-modal-open>Замовити послугу</button>
 
+          <!-- modal -->
+
           <div class="beckdrop is-hidden" data-modal>
             <div class="modal">
               <button class="modal-btn" data-modal-close>
-                <svg class="icon-Vector1" width="12" height="12">
-                  <use href="./images/X.svg#icon-Vector1"></use>
+                <svg class="icon-close-black" width="11" height="11">
+                  <use href="./images/icons.svg#icon-close-black"></use>
                 </svg>
               </button>
+
+              <!-- modal-form -->
+
+              <b class="form-titel">Залиште свої дані, ми вам передзвонимо</b>
+              <form class="modal-form">
+
+                <span class="form-lable">Ім'я</span>
+                <lable class="form-group">
+                  <input class="form-input" type="text" name="user-name">
+                  <svg class="icon-form" width="12" height="12">
+                    <use href="./images/icons.svg#icon-person-black"></use>
+                  </svg>
+                </lable>
+
+                <span class="form-lable">Телефон</span>
+                <lable class="form-group">
+                  <input class="form-input" type="tel" name="user-phone">
+                  <svg class="icon-form" width="13" height="12">
+                    <use href="./images/icons.svg#icon-phone-black"></use>
+                  </svg>
+                </lable>
+
+                <span class="form-lable">Пошта</span>
+                <lable class="form-group">
+                  <input class="form-input" type="email" name="user-mail">
+                  <svg class="icon-form" width="15" height="12">
+                    <use href="./images/icons.svg#icon-email-black"></use>
+                  </svg>
+                </lable>
+
+                <span class="form-lable">Коментар</span>
+                <lable class="form-group-masseage">
+                  <textarea class="form-masseage" name="user-masseage" rows="10" placeholder="Введіть текст"></textarea>
+                </lable>
+
+                <label class="form-polise">
+                  <input class="checkbox visually-hidden"  type="checkbox">
+                  <span class="custom-checkbox">
+                    <svg class="form-icon-check" width="15" height="12">
+                      <use href="./images/icons.svg#icon-icon-check"></use>
+                    </svg>
+                  </span>
+                  <span class="form-polise-desc">Погоджуюся з розсилкою та приймаю 
+                    <a href="" class="polise-style">Умови договору</a>
+                  </span>
+                </label>
+
+                <button class="btn-form" type="submit">Відправити</button>
+              </form>
             </div>
           </div>
         </div>
@@ -387,7 +438,9 @@
         </div>
       </section>
     </main>
+
     <!--footer-->
+
     <footer class="footer">
       <div class="container footer-container">
         <div>
@@ -415,6 +468,8 @@
             </ul>
           </address>
         </div>
+
+        <!-- come-back -->
 
         <div class="come-back-item">
           <b class="come-back">приєднуйтесь</b>
@@ -450,6 +505,24 @@
             </li>
           </ul>
         </div>
+
+        <!-- form-email -->
+        
+        <div class="come-back-email">
+          <b class="come-back">Підпишіться на розсилку</b>
+          <form class="form-email" name="form-email" method="post">
+            <label class="label-email">
+              <input class="input-email-form" type="email" name="input-email" id="input-email" placeholder="E-mail">
+            </label>
+            <button type="submit" class="label-email-btn">
+              <b class="span-label-email">Підписатися</b>
+              <svg class="icon-icon-send" width="24" height="24">
+                <use href="./images/icons.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+        
       </div>
     </footer>
 
