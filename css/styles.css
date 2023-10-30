@@ -306,6 +306,7 @@ color: #757575;
     left: 50%;
      
     width: 528px;
+    height: 581px;
 
     padding: 40px;
 
@@ -349,11 +350,15 @@ color: #757575;
 
     cursor: pointer;
 
+    transition: fill var(--time-animation);
+
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
     fill: var(--accent-color);
+
+    transition: fill var(--time-animation);
 }
 
 
@@ -382,11 +387,11 @@ color: #757575;
     position: relative;
  
     display: block;
-    margin-bottom: 28px;
+    margin-bottom: 10px;
 }
 
 
-.form-lable {
+.form-label {
     display: flex;
 
     justify-content: flex-start;
@@ -463,13 +468,17 @@ color: #757575;
     outline: transparent;
 }
 
+
 .form-polise {
     display: flex;
     align-items: baseline;
     justify-content: center;
     
+    margin-top: -7px;
+    
     margin-bottom: 30px;
 }
+
 .custom-checkbox {
     width: 16px;
     height: 15px;
@@ -484,24 +493,36 @@ color: #757575;
     outline: 2px solid var(--secondary-text-color);
     outline-offset: -2px;
 
-    transition: background-color var(--time-animation);
+    transition: background-color, outline, opacity, var(--time-animation);
 }
 
 .form-icon-check {
     opacity: 0;
 
-    transition: opacity var(--time-animation);
+    transition: opacity, background-color, fill,
+        outline, var(--time-animation);
 }
 
 .checkbox:checked + .custom-checkbox .form-icon-check {
     opacity: 1;
 }
 
-.checkbox:checked+.custom-checkbox {
+.checkbox:checked + .custom-checkbox {
     background-color: var(--accent-color);
     border-radius: 2px;
     outline: 2px solid var(--accent-color);
     outline-offset: -2px;
+}
+
+.checkbox:focus+.custom-checkbox .form-icon-check,
+.checkbox:hover+.custom-checkbox .form-icon-check {
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    outline: 2px solid var(--accent-color);
+    outline-offset: -2px;
+    fill: var(--accent-color);
+    opacity: 1;
+
 }
 
 .form-polise-desc {
@@ -540,24 +561,21 @@ color: #757575;
     letter-spacing: 0.96px;
 
     border-radius: 4px;
-    background: var(--accent-color);
+    background-color: var(--accent-color);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     border: none;
 
-    transition: transform var(--time-animation);
+    transition: background-color, box-shadow, var(--time-animation);
 
     cursor: pointer;
-
     
 }
 
 .btn-form:hover,
 .btn-form:focus {
     border-radius: 4px;
-    background: #188CE8;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-
-
+    background-color: #188CE8;
+    box-shadow: 0px 4px 4px 0px rgba(55, 1, 1, 0.363);
 }
 
 
@@ -1071,6 +1089,10 @@ color: #757575;
     display: flex;
     align-items: baseline;
 
+}
+
+.container-address {
+    width: 231px;
 }
 
 .logo-link {
