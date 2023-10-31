@@ -499,8 +499,7 @@ color: #757575;
 .form-icon-check {
     opacity: 0;
 
-    transition: opacity, background-color, fill,
-        outline, var(--time-animation);
+    transition: opacity, outline, var(--time-animation);
 }
 
 .checkbox:checked + .custom-checkbox .form-icon-check {
@@ -514,15 +513,10 @@ color: #757575;
     outline-offset: -2px;
 }
 
-.checkbox:focus+.custom-checkbox .form-icon-check,
-.checkbox:hover+.custom-checkbox .form-icon-check {
-    background-color: var(--accent-color);
+.checkbox:focus + .custom-checkbox {
     border-radius: 2px;
     outline: 2px solid var(--accent-color);
     outline-offset: -2px;
-    fill: var(--accent-color);
-    opacity: 1;
-
 }
 
 .form-polise-desc {
